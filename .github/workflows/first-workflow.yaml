@@ -1,0 +1,10 @@
+name: The first workflow #The name that is to be visible on the github actions page
+run-name: ${{ github.actor }} triggered their first workflow! 🐣  # The name of the run, which shows up each time a workflow is run (I'm all for the dollar, but who is this github actor guy??)
+on: push # The trigger for the workflow to run (Who we pushing? Why?)
+
+jobs: # This is a group of steps that are to be run when a workflow is triggered
+  the-first-job: # The name of the job (sounds like a heist)
+    runs-on: ubuntu-latest # This is the machine on which the job will run (Can i name mine Usain Bolt?) 
+    steps: # The steps that each job would have to complete in order to be successful in the eyes of the workflow (real indian parent vibes workflow)
+      - run: echo "You thought we would do something better for the first workflow, didn't you?" # You know what echo does right, right?
+      - run: echo "Nahh, Hello World it is!"
