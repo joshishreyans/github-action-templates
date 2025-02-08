@@ -1,0 +1,10 @@
+name: The first workflow
+run-name: ${{ github.actor }} triggered their first workflow! 🐣 
+on: push 
+
+jobs: 
+  the-first-job:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "You thought we would do something better for the first workflow, didn't you?"
+      - run: echo "Nahh, Hello World it is!"
