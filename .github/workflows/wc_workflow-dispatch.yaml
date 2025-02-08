@@ -1,0 +1,11 @@
+name: Workflow-dispatch workflow
+run-name: ${{ github.actor }} triggered a manual workflow! 👆
+on: workflow_dispatch
+
+jobs: 
+  Manuel:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "You pressed a button and ran this"
+      - run: echo "This is the status of the workflow ${{ job.status }}"
+
