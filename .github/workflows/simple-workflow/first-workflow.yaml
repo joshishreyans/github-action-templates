@@ -1,6 +1,10 @@
 name: The first workflow #The name that is to be visible on the github actions page
 run-name: ${{ github.actor }} triggered their first workflow! 🐣  # The name of the run, which shows up each time a workflow is run (I'm all for the dollar, but who is this github actor guy??)
-on: push # The trigger for the workflow to run (Who we pushing? Why?)
+on: 
+  push: # The trigger for the workflow to run (Who we pushing? Why?)
+    push:
+      paths: # Done to avoid triggering the workflow on every commit
+        ../simple-workflow
 
 jobs: # This is a group of steps that are to be run when a workflow is triggered
   the-first-job: # The name of the job (sounds like a heist)

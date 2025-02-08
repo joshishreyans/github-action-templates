@@ -1,0 +1,12 @@
+name: Workflow-dispatch workflow
+run-name: ${{ github.actor }} triggered a manual workflow! 👆
+on: workflow_dispatch # Runs the workflow when triggered manually via the github actions page (Manual automation baby!)
+
+jobs: 
+  Manuel: # Yup my job is Hispanic 
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "You pressed a button and ran this"
+      - run: echo "This is the status of the workflow ${{ job.status }}" # The dollar and curly brackets notation is used to add github specific variables to the workflow environment. There are a lot of events related to jobs and github events themselves which can be found here: https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs
+
+
