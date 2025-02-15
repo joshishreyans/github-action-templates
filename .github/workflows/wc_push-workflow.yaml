@@ -9,5 +9,5 @@ jobs:
   Push-triggered:
     runs-on: ubuntu-latest
     steps: 
-      - run: echo "You pushed a commit and ran this"
+      - run: echo "You pushed a commit and ran this!"
       - run: echo "The workflow result is:${{ job.status }}"
