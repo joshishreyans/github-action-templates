@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} you pushed a commit (Hmm, did you recheck the chan
 on: 
 	push:
   	paths:
-    	./push-workflow.yaml # Trigger workflow only on changes to this file
+    	../build-triggers # Trigger workflow only on changes to this folder
 
 jobs: 
   Push-triggered:
