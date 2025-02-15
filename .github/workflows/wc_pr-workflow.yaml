@@ -1,0 +1,16 @@
+name: Pull request triggered workflow
+run-name:  ${{ github.actor }} you created a pull request! 🏗️
+
+on: 
+  pull_request:
+    branches:
+      main
+
+jobs:
+  pull-request-triggered:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "You created a PR and ran this"
+          echo "The workflow result is: ${{ job.status }}" 
+
