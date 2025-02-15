@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} you pushed a commit (Hmm, did you recheck the chan
 on: 
   push:
     paths:
-      ./build-triggers/*
+      'build-triggers/**'
 
 jobs: 
   Push-triggered:
