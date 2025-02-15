@@ -1,0 +1,13 @@
+name: Push triggered workflow
+run-name: ${{ github.actor }} you pushed a commit (Hmm, did you recheck the changes?)!🪲 #Yeah, now that's going to break everything
+on: 
+	push:
+  	paths:
+    	./push-workflow.yaml # Trigger workflow only on changes to this file
+
+jobs: 
+  Push-triggered:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "You pushed a commit and ran this"
+      - run: echo "The workflow result is:${{ job.status }}"
