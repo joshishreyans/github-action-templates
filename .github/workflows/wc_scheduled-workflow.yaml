@@ -1,0 +1,12 @@
+name: Scheduled workflow
+run-name: This workflow was triggered according to schedule.
+
+on: 
+    schedule:
+        - cron: '20 11 * * 0'
+
+jobs:
+    Scheduled-job:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "This is a scheduled job run every Sunday at 11:20 am"
