@@ -1,0 +1,12 @@
+name: Scheduled workflow
+run-name: This workflow was triggered according to schedule. # Yeah unlike you sleeping at different times everyday
+
+on: 
+    schedule:
+        - cron: '30 5 * * 0' # Because I wanna test if it works (It didn't)
+
+jobs:
+    Scheduled-job:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "This is a scheduled job run every Sunday at 11:30 am IST (5:30 am UTC)"
